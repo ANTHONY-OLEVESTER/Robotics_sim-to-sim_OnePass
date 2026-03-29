@@ -1,5 +1,5 @@
 import { SectionBlock } from "../components/SectionBlock";
-import { codeSnippets, docsSections } from "../data/siteContent";
+import { codeSnippets, docsSections, pypiUrl } from "../data/siteContent";
 
 function CodeBlock({ code }: { code: string }) {
   return (
@@ -30,6 +30,30 @@ export function DocsPage() {
               </ul>
             </article>
           ))}
+        </div>
+      </SectionBlock>
+
+      <SectionBlock
+        eyebrow="Package"
+        title="Published companion package"
+        description="The PyPI package is the lightweight install path for docs access, results navigation, environment checks, and selected curated utilities."
+      >
+        <div className="grid gap-4 lg:grid-cols-[1.1fr_0.9fr]">
+          <CodeBlock code={codeSnippets.packageInstall} />
+          <div className="rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-5 shadow-glow">
+            <p className="text-xs uppercase tracking-[0.22em] text-mint">Package page</p>
+            <a
+              href={pypiUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="mt-4 inline-flex rounded-full border border-white/15 px-4 py-2 text-sm text-paper transition hover:border-mint/50 hover:bg-white/5"
+            >
+              Open sim2sim-onepass on PyPI
+            </a>
+            <p className="mt-4 text-sm leading-7 text-steel">
+              The package is intentionally lightweight. Full simulator execution still depends on the curated repo layout and simulator dependencies.
+            </p>
+          </div>
         </div>
       </SectionBlock>
 

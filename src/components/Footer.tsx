@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { assetPath, repoUrl } from "../data/siteContent";
+import { assetPath, pypiUrl, repoUrl } from "../data/siteContent";
 
 export function Footer() {
   return (
@@ -34,6 +34,9 @@ export function Footer() {
           </p>
           <a href={repoUrl} rel="noreferrer" target="_blank" className="block hover:text-paper">
             GitHub repository
+          </a>
+          <a href={pypiUrl} rel="noreferrer" target="_blank" className="block hover:text-paper">
+            PyPI package
           </a>
           <a href={assetPath("reports/canonical-pass-report.md")} className="block hover:text-paper">
             Canonical report

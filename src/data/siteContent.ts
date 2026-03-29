@@ -16,6 +16,7 @@ export type MetricCardData = {
 
 export const repoUrl =
   "https://github.com/ANTHONY-OLEVESTER/Robotics_sim-to-sim_OnePass";
+export const pypiUrl = "https://pypi.org/project/sim2sim-onepass/";
 
 export function assetPath(relativePath: string) {
   return `${import.meta.env.BASE_URL}assets/${relativePath}`;
@@ -251,6 +252,15 @@ export const resultGallery = [
 
 export const docsSections = [
   {
+    title: "Companion package",
+    items: [
+      "Published package: sim2sim-onepass",
+      "Install with: python -m pip install sim2sim-onepass",
+      "Optional rollout extra: python -m pip install \"sim2sim-onepass[rollout]\"",
+      "The package is a lightweight companion CLI, not a full standalone simulator stack"
+    ]
+  },
+  {
     title: "Environment",
     items: [
       "Vite + React + TypeScript + Tailwind CSS",
@@ -272,6 +282,8 @@ export const docsSections = [
 ];
 
 export const codeSnippets = {
+  packageInstall: `python -m pip install sim2sim-onepass
+python -m pip install "sim2sim-onepass[rollout]"`,
   setup: `py -m venv .bridge312
 .\\.bridge312\\Scripts\\Activate.ps1
 python -m pip install -U pip

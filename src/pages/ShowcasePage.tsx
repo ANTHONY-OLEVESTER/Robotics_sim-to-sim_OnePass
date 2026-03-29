@@ -11,6 +11,7 @@ import {
   heroMetrics,
   limitations,
   metricGroups,
+  pypiUrl,
   repoUrl
 } from "../data/siteContent";
 
@@ -58,6 +59,14 @@ export function ShowcasePage() {
                 Open documentation
               </NavLink>
               <a
+                href={pypiUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="rounded-full border border-white/15 px-5 py-3 text-sm font-semibold text-paper transition hover:border-cyan/40 hover:bg-cyan/10"
+              >
+                Install from PyPI
+              </a>
+              <a
                 href={repoUrl}
                 target="_blank"
                 rel="noreferrer"
@@ -77,6 +86,50 @@ export function ShowcasePage() {
           </div>
         </div>
       </section>
+
+      <SectionBlock
+        eyebrow="Companion package"
+        title="Install the lightweight CLI without cloning the full repo"
+        description="The published package is intentionally narrow. It gives users docs access, results navigation, environment checks, and selected curated utilities without pretending to ship the full simulator stack."
+      >
+        <div className="grid gap-4 lg:grid-cols-[1.2fr_0.8fr]">
+          <article className="rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-6 shadow-glow">
+            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-mint">
+              Published package
+            </p>
+            <h3 className="mt-3 font-display text-3xl font-semibold text-paper">
+              sim2sim-onepass
+            </h3>
+            <p className="mt-4 max-w-2xl text-sm leading-7 text-steel">
+              Use the companion package when you want the CLI, embedded markdown docs,
+              results navigation, environment checks, and the tiny quick-sanity demo.
+              Use the repo when you need the full curated evidence bundle and source-workspace references.
+            </p>
+            <div className="mt-6 flex flex-wrap gap-3">
+              <a
+                href={pypiUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="rounded-full bg-paper px-5 py-3 text-sm font-semibold text-ink transition hover:opacity-90"
+              >
+                Open PyPI package
+              </a>
+              <code className="rounded-full border border-white/10 bg-black/20 px-4 py-3 text-sm text-paper">
+                pip install sim2sim-onepass
+              </code>
+            </div>
+          </article>
+          <article className="rounded-[1.75rem] border border-mint/25 bg-mint/10 p-6 shadow-glow">
+            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-mint">
+              Scope
+            </p>
+            <p className="mt-4 text-sm leading-7 text-paper">
+              The package does not ship full simulator environments, full datasets, or the full visual media payload.
+              It is a companion interface for the public research release, not a standalone robotics simulator framework.
+            </p>
+          </article>
+        </div>
+      </SectionBlock>
 
       <SectionBlock
         eyebrow="Main evidence"
