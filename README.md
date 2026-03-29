@@ -1,41 +1,61 @@
-# Robotics Sim2Sim-OnePass
+# Sim2Sim-OnePass Public Release
 
-This repository is a curated public-facing proof package. Start with the release layer at [onepass_release/README.md](onepass_release/README.md).
+This curated layer is the fast path through the repository. It is designed so a new visitor can understand the claim, watch the evidence, inspect the canonical PASS artifacts, and run the shortest validation path without digging through the full development history.
 
-## Start In 30 Seconds
+## Pick Your Route
 
-Choose the path that matches how you want to explore:
-
-| I want to... | Open this |
+| If you want to... | Open this |
 | --- | --- |
-| Understand the project fast | [onepass_release/README.md](onepass_release/README.md) |
-| Watch the visual evidence | [onepass_release/VISUAL_INDEX.md](onepass_release/VISUAL_INDEX.md) |
-| See the canonical PASS metrics | [onepass_release/RESULTS_SUMMARY.md](onepass_release/RESULTS_SUMMARY.md) |
-| Run the shortest validation path | [onepass_release/QUICKSTART.md](onepass_release/QUICKSTART.md) |
-| Inspect the packaged proof bundle | [onepass_release/outputs/canonical_pass/](onepass_release/outputs/canonical_pass/) |
-
-## What This Project Does
-
-Sim2Sim-OnePass studies deterministic simulator-to-simulator transfer between PyBullet and MuJoCo for a Franka Panda manipulation setup. The central claim is that, after strict cross-simulator alignment, a learned residual correction reduces next-state mismatch and remains stable under long-horizon rollout checks.
+| See the project in one screen | [RESULTS_SUMMARY.md](RESULTS_SUMMARY.md) |
+| Watch the visual evidence first | [VISUAL_INDEX.md](VISUAL_INDEX.md) |
+| Run the shortest validation path | [QUICKSTART.md](QUICKSTART.md) |
+| Inspect the packaged PASS bundle | [outputs/canonical_pass/](outputs/canonical_pass/) |
+| Understand how the repo is organized | [REPO_MAP.md](REPO_MAP.md) |
 
 ## See It Before You Read It
 
-| Triptych preview | Rollout summary |
+| Triptych preview | Rollout figure |
 | --- | --- |
-| [![Triptych preview](onepass_release/outputs/canonical_pass/preview/triptych_frame0.png)](onepass_release/outputs/canonical_pass/preview/triptych_frame0.png) | [![Rollout summary](onepass_release/outputs/canonical_pass/plots/rollout_phys_p95.png)](onepass_release/outputs/canonical_pass/plots/rollout_phys_p95.png) |
+| [![Triptych preview](outputs/canonical_pass/preview/triptych_frame0.png)](outputs/canonical_pass/preview/triptych_frame0.png) | [![Rollout figure](outputs/canonical_pass/plots/rollout_phys_p95.png)](outputs/canonical_pass/plots/rollout_phys_p95.png) |
 
-## Canonical Proof Bundle
+Open the full visual package here:
 
-- Curated public package: [onepass_release/](onepass_release/)
-- Release-side canonical report: [onepass_release/outputs/canonical_pass/report.md](onepass_release/outputs/canonical_pass/report.md)
-- Release-side metrics summary: [onepass_release/outputs/canonical_pass/metrics_summary.json](onepass_release/outputs/canonical_pass/metrics_summary.json)
+- [VISUAL_INDEX.md](VISUAL_INDEX.md)
+- [outputs/canonical_pass/videos/compare_triptych.mp4](outputs/canonical_pass/videos/compare_triptych.mp4)
+- [outputs/canonical_pass/report.md](outputs/canonical_pass/report.md)
 
-## Repo Navigation
+## The Claim In Plain Terms
 
-- Public release layer: [onepass_release/README.md](onepass_release/README.md)
-- Bundle map: [onepass_release/REPO_MAP.md](onepass_release/REPO_MAP.md)
-- Packaging notes: [onepass_release/docs/PUBLISHING.md](onepass_release/docs/PUBLISHING.md)
+After enforcing deterministic cross-simulator alignment between PyBullet and MuJoCo, this repo learns a residual next-state correction that:
 
-## Provenance Note
+- reduces Bullet-to-MuJoCo one-step physical error,
+- remains stable under long-horizon rollout checks,
+- passes holdout and alignment gates,
+- and can be inspected visually through replay videos, triptychs, and overlay plots.
 
-This repository is the curated artifact layer. The release bundle preserves copied reports, metrics, plots, previews, and videos from the selected PASS sources. Source-path provenance is documented inside the bundle rather than by shipping the entire private development workspace.
+## Canonical Story
+
+1. Deterministic paired plans are executed in PyBullet and MuJoCo.
+2. A strict alignment gate blocks training if reset state, timing, or first-step consistency drift.
+3. A residual model predicts the MuJoCo-minus-Bullet next-state gap.
+4. Hard-mode stress evaluation verifies one-step accuracy, holdouts, and rollout stability.
+5. Behavioral acceptance exports replay videos, triptychs, and overlay plots for inspection.
+
+## Canonical Evidence
+
+- Quantitative anchor: packaged in `outputs/canonical_pass/source_stress_report.md` and `outputs/canonical_pass/source_stress_metrics.json`
+- Visual anchor: packaged in `outputs/canonical_pass/source_behavioral_report.md` and the copied videos and preview images
+- Public-facing copied bundle: [outputs/canonical_pass/](outputs/canonical_pass/)
+- Provenance map: [configs/canonical_sources.json](configs/canonical_sources.json)
+
+## Exact Quickstart
+
+This public repo is optimized for inspection first. Open [QUICKSTART.md](QUICKSTART.md) for the shortest path through the packaged evidence and for command references preserved from the source workspace.
+
+## What Lives Where
+
+- [outputs/canonical_pass/](outputs/canonical_pass/) contains the reviewer-facing proof artifacts.
+- [examples/canonical_commands.ps1](examples/canonical_commands.ps1) contains exact rerun commands.
+- [docs/CANONICAL_SOURCES.md](docs/CANONICAL_SOURCES.md) records provenance.
+- [docs/PUBLISHING.md](docs/PUBLISHING.md) defines what to ship in a public release.
+- The interactive website is published from the `gh-pages` branch.

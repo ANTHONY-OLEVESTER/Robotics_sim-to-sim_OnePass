@@ -10,7 +10,6 @@ This repository is intentionally small. It is a curated artifact layer, not the 
 - [`RESULTS_SUMMARY.md`](RESULTS_SUMMARY.md): canonical metrics and claim boundaries.
 - [`MANIFEST.md`](MANIFEST.md): what is included here and what is intentionally left out.
 - [`outputs/canonical_pass/`](outputs/canonical_pass/): copied, reviewer-facing artifacts from selected PASS runs.
-- [`../site/`](../site/): interactive static website source built on top of this curated artifact.
 
 ## Packaged Evidence
 
@@ -30,3 +29,4 @@ This repository is intentionally small. It is a curated artifact layer, not the 
 - Canonical for this release means: explicitly selected PASS artifacts that support the main public claim and can be inspected quickly.
 - Legacy/development means: training code, simulator environments, timestamped historical reports, debug scripts, and intermediate experiments from the original workspace that are not included in this trimmed repo.
 - This public repo only ships the guided proof bundle and the provenance needed to understand it.
+- The interactive website is maintained separately on the `gh-pages` branch.

@@ -6,7 +6,7 @@ This page defines what to ship when republishing this curated bundle or rebuildi
 
 For a full reproducible deposit from the source workspace, include these paths together:
 
-- `onepass_release/`
+- the root curated release contents in this branch
 - `reports/stress_20260203-173231/`
 - `reports/20260210-173200/behavioral_acceptance/`
 - `reports/delta_train_hardgen_fix_20260203-135301/`
@@ -20,10 +20,9 @@ For a full reproducible deposit from the source workspace, include these paths t
 
 ## GitHub Release Checklist
 
-- point the repo root README at `onepass_release/README.md`
-- verify `onepass_release/configs/canonical_sources.json`
-- rerun `onepass_release/scripts/package_release_assets.py` if canonical source files changed
-- confirm videos and preview PNGs open correctly from `onepass_release/outputs/canonical_pass/`
+- verify `configs/canonical_sources.json`
+- rerun `scripts/package_release_assets.py` if canonical source files changed
+- confirm videos and preview PNGs open correctly from `outputs/canonical_pass/`
 - attach a zipped curated bundle if repository browsing performance matters
 
 ## Zenodo Checklist
@@ -37,7 +36,7 @@ For a full reproducible deposit from the source workspace, include these paths t
 
 If the canonical PASS source changes, update:
 
-1. `onepass_release/configs/canonical_sources.json`
-2. `onepass_release/RESULTS_SUMMARY.md`
-3. `onepass_release/VISUAL_INDEX.md`
-4. run `onepass_release/scripts/package_release_assets.py`
+1. `configs/canonical_sources.json`
+2. `RESULTS_SUMMARY.md`
+3. `VISUAL_INDEX.md`
+4. run `scripts/package_release_assets.py`
