@@ -208,8 +208,8 @@ export function ShowcasePage() {
 
       <SectionBlock
         eyebrow="How it works"
-        title="A compact pipeline diagram with expandable detail"
-        description="The pipeline is simple enough to show in one screen: pair deterministically, gate alignment, learn the residual, validate at rollout scale, and surface one canonical PASS story."
+        title="Drag the pipeline blocks to inspect the full flow"
+        description="This section is the interactive remake of the paper pipeline figure. Drag the blocks, click them for detail, and inspect how deterministic pairing, gating, residual correction, projection, and horizon validation connect."
       >
         <PipelineDiagram />
       </SectionBlock>
