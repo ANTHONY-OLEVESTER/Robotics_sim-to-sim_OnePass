@@ -25,26 +25,15 @@ export function VideoPanel() {
 
       <div className="mt-5 grid gap-5 lg:grid-cols-[minmax(0,1.75fr)_minmax(280px,1fr)]">
         <div className="overflow-hidden rounded-[1.5rem] border border-white/10 bg-[#03070d]">
-          {active.path ? (
-            <video
-              className="aspect-video h-full w-full object-contain bg-black"
-              controls
-              playsInline
-              preload="metadata"
-              poster={active.posterPath}
-            >
-              <source src={active.path} />
-            </video>
-          ) : (
-            <div className="flex aspect-video items-center justify-center bg-gradient-to-br from-white/5 to-white/[0.02] p-8 text-center">
-              <div className="max-w-sm">
-                <p className="font-display text-2xl font-semibold text-paper">
-                  Standalone corrected render not packaged
-                </p>
-                <p className="mt-3 text-sm leading-6 text-steel">{active.note}</p>
-              </div>
-            </div>
-          )}
+          <video
+            className="aspect-video h-full w-full object-contain bg-black"
+            controls
+            playsInline
+            preload="metadata"
+            poster={active.posterPath}
+          >
+            <source src={active.path} />
+          </video>
         </div>
 
         <div className="rounded-[1.5rem] border border-white/10 bg-slate/60 p-5">
