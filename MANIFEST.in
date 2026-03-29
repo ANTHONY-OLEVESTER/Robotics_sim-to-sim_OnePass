@@ -1,0 +1,18 @@
+include LICENSE
+include README.md
+include QUICKSTART.md
+include REPO_MAP.md
+include RESULTS_SUMMARY.md
+include VISUAL_INDEX.md
+include MANIFEST.md
+include PYPI_PACKAGE_NOTES.md
+recursive-include src/sim2sim_onepass/resources *.md
+
+prune outputs
+prune assets
+prune docs
+prune examples
+prune .git
+
+global-exclude *.py[cod]
+global-exclude __pycache__

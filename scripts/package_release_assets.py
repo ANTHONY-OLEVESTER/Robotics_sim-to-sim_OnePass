@@ -5,9 +5,9 @@ import shutil
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[2]
-RELEASE = ROOT / "onepass_release"
-CANONICAL = RELEASE / "outputs" / "canonical_pass"
+ROOT = Path(__file__).resolve().parents[1]
+RELEASE = ROOT
+CANONICAL = ROOT / "outputs" / "canonical_pass"
 
 STRESS_DIR = ROOT / "reports" / "stress_20260203-173231"
 BEHAVIORAL_DIR = ROOT / "reports" / "20260210-173200" / "behavioral_acceptance"
@@ -203,7 +203,7 @@ def main() -> None:
         },
         "paper_asset": str(PAPER_FIG.relative_to(ROOT)).replace("\\", "/"),
     }
-    write_json(RELEASE / "configs" / "canonical_sources.json", canonical_sources)
+    write_json(ROOT / "configs" / "canonical_sources.json", canonical_sources)
 
 
 if __name__ == "__main__":
