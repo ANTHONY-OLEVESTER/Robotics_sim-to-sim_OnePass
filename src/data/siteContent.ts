@@ -316,9 +316,5 @@ export const downloadLinks = [
   {
     label: "Stress metrics JSON",
     href: assetPath("reports/source-stress-metrics.json")
-  },
-  {
-    label: "Pipeline PDF",
-    href: assetPath("reports/pipeline.pdf")
   }
 ];

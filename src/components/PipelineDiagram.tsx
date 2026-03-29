@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { assetPath, pipelineSteps } from "../data/siteContent";
+import { NavLink } from "react-router-dom";
+import { pipelineSteps } from "../data/siteContent";
 
 export function PipelineDiagram() {
   const [open, setOpen] = useState(0);
@@ -51,12 +52,15 @@ export function PipelineDiagram() {
             </div>
           ))}
         </div>
-        <a
-          href={assetPath("reports/pipeline.pdf")}
-          className="mt-8 inline-flex rounded-full border border-white/10 px-4 py-2 text-sm text-paper transition hover:border-cyan/50 hover:bg-cyan/10"
+        <div className="mt-8 rounded-2xl border border-white/10 bg-black/20 p-4 text-sm leading-7 text-steel">
+          This site uses an interactive pipeline summary instead of linking out to a PDF figure.
+        </div>
+        <NavLink
+          to="/docs"
+          className="mt-4 inline-flex rounded-full border border-white/10 px-4 py-2 text-sm text-paper transition hover:border-cyan/50 hover:bg-cyan/10"
         >
-          Open canonical pipeline PDF
-        </a>
+          Open technical docs
+        </NavLink>
       </aside>
     </div>
   );
