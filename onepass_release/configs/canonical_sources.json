@@ -1,0 +1,13 @@
+{
+  "quantitative_pass": {
+    "report_dir": "reports/stress_20260203-173231",
+    "report_md": "reports/stress_20260203-173231/report.md",
+    "metrics_json": "reports/stress_20260203-173231/metrics.json"
+  },
+  "behavioral_pass": {
+    "report_dir": "reports/20260210-173200/behavioral_acceptance",
+    "report_md": "reports/20260210-173200/behavioral_acceptance/report.md",
+    "triptych_report_md": "reports/20260210-173200/behavioral_acceptance/triptych/report.md"
+  },
+  "paper_asset": "paper/corl_camera_ready/figures/rollout_phys_p95.png"
+}

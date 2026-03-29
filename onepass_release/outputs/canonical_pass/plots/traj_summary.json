@@ -1,0 +1,18 @@
+{
+  "ee": {
+    "bullet_raw_path_length": 0.6068644523620605,
+    "mujoco_ref_path_length": 0.690432713814247,
+    "bullet_corr_path_length": 0.6070777177810669
+  },
+  "obj": {
+    "bullet_raw_path_length": 2.142438643204514e-05,
+    "mujoco_ref_path_length": 6.094569383853601e-12,
+    "bullet_corr_path_length": 1.7354741430608556e-05
+  },
+  "deviation": {
+    "ee_raw_vs_ref_max": 0.07311303024415934,
+    "obj_raw_vs_ref_max": 1.4122866633732143e-05,
+    "ee_corr_vs_ref_max": 0.07298209576691682,
+    "obj_corr_vs_ref_max": 1.407978209026374e-05
+  }
+}

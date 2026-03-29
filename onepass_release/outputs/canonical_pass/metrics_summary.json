@@ -1,0 +1,212 @@
+{
+  "canonical_story": {
+    "project": "Sim2Sim-OnePass",
+    "quantitative_source": "reports/stress_20260203-173231",
+    "visual_source": "reports/20260210-173200/behavioral_acceptance"
+  },
+  "quantitative_pass": {
+    "final_verdict": "PASS",
+    "alignment_gate": true,
+    "one_step_raw_phys": {
+      "mean": 0.09414576900348527,
+      "median": 0.08541359752416611,
+      "p95": 0.11957257986068726,
+      "max": 0.46265551447868347
+    },
+    "one_step_corrected_phys": {
+      "mean": 0.010606823009346799,
+      "median": 0.009420250076800585,
+      "p95": 0.020735336001962406,
+      "max": 0.10061672329902649
+    },
+    "rollout_tf_accuracy_phys": {
+      "50": {
+        "mean": 0.01002748581977794,
+        "median": 0.009100455325096846,
+        "p95": 0.017327269259840235,
+        "max": 0.08441773056983948
+      },
+      "200": {
+        "mean": 0.009902581831353018,
+        "median": 0.009204345755279064,
+        "p95": 0.01742504425346851,
+        "max": 0.082128144800663
+      },
+      "500": {
+        "mean": 0.010959413738753646,
+        "median": 0.009617418516427279,
+        "p95": 0.022175082936882973,
+        "max": 0.08723684400320053
+      }
+    },
+    "distribution_shift": {
+      "D1_seed_holdout": {
+        "available": true,
+        "pass": true,
+        "n": 176160,
+        "pred_mean": 0.010602706883744446,
+        "pred_p95": 0.020696488674730062
+      },
+      "D2_family_holdout": {
+        "available": true,
+        "pass": true,
+        "families": [
+          {
+            "family": "edge_push",
+            "n": 114480,
+            "pred_mean": 0.011006471535448746,
+            "pred_p95": 0.019795956276357173,
+            "pass": true
+          },
+          {
+            "family": "free_space_sweep",
+            "n": 119760,
+            "pred_mean": 0.011986865168533013,
+            "pred_p95": 0.021062707994133185,
+            "pass": true
+          },
+          {
+            "family": "high_impulse_tap",
+            "n": 118560,
+            "pred_mean": 0.011099319950459942,
+            "pred_p95": 0.021361867804080215,
+            "pass": true
+          },
+          {
+            "family": "micro_motion",
+            "n": 114960,
+            "pred_mean": 0.010673656460239954,
+            "pred_p95": 0.020580197311937776,
+            "pass": true
+          },
+          {
+            "family": "near_contact_skims",
+            "n": 169200,
+            "pred_mean": 0.009730936019761481,
+            "pred_p95": 0.02142075439915059,
+            "pass": true
+          },
+          {
+            "family": "reset_jitter",
+            "n": 113760,
+            "pred_mean": 0.010842011212561018,
+            "pred_p95": 0.02024237103760242,
+            "pass": true
+          },
+          {
+            "family": "rolling_contact",
+            "n": 119520,
+            "pred_mean": 0.011334683203133814,
+            "pred_p95": 0.021124816965311745,
+            "pass": true
+          },
+          {
+            "family": "spin_induce",
+            "n": 113280,
+            "pred_mean": 0.010890652316702677,
+            "pred_p95": 0.020212644431740038,
+            "pass": true
+          },
+          {
+            "family": "stop_go",
+            "n": 110880,
+            "pred_mean": 0.008128466304448906,
+            "pred_p95": 0.020146045088767935,
+            "pass": true
+          }
+        ]
+      }
+    },
+    "contact_proxy_summary": {
+      "contact_flag_acc": 0.9910754751461989,
+      "contact_force_p95": 0.12355266511440277,
+      "min_dist_p95": 0.004644604399800301
+    },
+    "worst_slices": [
+      {
+        "slice": "t_0_20",
+        "n": 218880,
+        "raw_p95": 0.2052767276763916,
+        "corr_p95": 0.0357722984626889,
+        "raw_contact_p95": 0.02280634641647339,
+        "corr_contact_p95": 0.018784797657281152,
+        "improve_ratio": 7.064062746052402
+      },
+      {
+        "slice": "A_q00_25",
+        "n": 273605,
+        "raw_p95": 0.19493234157562256,
+        "corr_p95": 0.028869266435503957,
+        "raw_contact_p95": 1.0124124765396119,
+        "corr_contact_p95": 0.09391637444496144,
+        "improve_ratio": 9.657618927809036
+      },
+      {
+        "slice": "far_contact",
+        "n": 673040,
+        "raw_p95": 0.15009163320064545,
+        "corr_p95": 0.02361719999462366,
+        "raw_contact_p95": 0.022588729858398438,
+        "corr_contact_p95": 0.022527609672397367,
+        "improve_ratio": 7.276168809672767
+      },
+      {
+        "slice": "t_80_100",
+        "n": 218880,
+        "raw_p95": 0.1156066358089447,
+        "corr_p95": 0.021650530863553282,
+        "raw_contact_p95": 1.0195860505104062,
+        "corr_contact_p95": 0.14980394318699836,
+        "improve_ratio": 10.37609414216857
+      },
+      {
+        "slice": "contact0",
+        "n": 975714,
+        "raw_p95": 0.1380372792482376,
+        "corr_p95": 0.021609405428171153,
+        "raw_contact_p95": 0.02274996042251587,
+        "corr_contact_p95": 0.11931628957390782,
+        "improve_ratio": 8.312033967396205
+      }
+    ],
+    "thresholds": {
+      "raw_mean_le": 0.5,
+      "raw_p95_le": 1.0,
+      "corr_phys_p95_le": 0.2,
+      "tf50_phys_p95_le": 0.25,
+      "tf200_phys_p95_le": 0.3,
+      "tf500_phys_p95_le": 0.35
+    }
+  },
+  "behavioral_pass": {
+    "report_path": "reports/20260210-173200/behavioral_acceptance/report.md",
+    "gates": {
+      "determinism": "PASS",
+      "state_set_get_identity": "PASS",
+      "stability_after_settle": "PASS",
+      "stability_corr_after_settle": "PASS",
+      "motion": "PASS",
+      "cross_sim_agreement": "PASS",
+      "one_step_improvement": "PASS",
+      "correction_visibility": "PASS",
+      "correction_rollout_improves": "PASS",
+      "acrobatics": "PASS",
+      "artifacts": "PASS"
+    },
+    "selected_metrics": {
+      "ee_end_dist_to_target": "8.394202450290322e-05",
+      "ee_end_dist_bullet_vs_mujoco": "0.032857298826639444",
+      "ee_raw_vs_ref_max": "0.07311303024415934",
+      "ee_corr_vs_ref_max": "0.07298209576691682",
+      "obj_raw_vs_ref_max": "1.4122866633732143e-05",
+      "obj_corr_vs_ref_max": "1.407978209026374e-05",
+      "corr_panel_var_mean": "2742.2089606879517",
+      "best_alpha": "0.005",
+      "one_step_improvement": "{'raw_median': 0.03137571923434734, 'corr_median': 0.031279380433261395, 'raw_mean': 0.03284164751296345, 'corr_mean': 0.032755627771002764, 'improve_frac': 0.9100000262260437, 'alpha': 0.005, 'mask': 'q,dq,ee_pos,ee_quat', 'delta_clip': 'q=0.1,dq=0.2,ee_pos=0.02,ee_quat=0.1,obj_pos=0.02,obj_quat=0.1,obj_vel=0.2,proxies=5', 'ok': True}"
+    }
+  },
+  "notes": [
+    "The release intentionally uses separate canonical artifacts for quantitative hard-mode validation and visual behavioral validation.",
+    "No new scientific result is created here; this package only reorganizes existing PASS evidence into a public-facing structure."
+  ]
+}
