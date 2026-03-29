@@ -208,8 +208,8 @@ export function ShowcasePage() {
 
       <SectionBlock
         eyebrow="How it works"
-        title="Drag the pipeline blocks to inspect the full flow"
-        description="This section is the interactive remake of the paper pipeline figure. Drag the blocks, click them for detail, and inspect how deterministic pairing, gating, residual correction, projection, and horizon validation connect."
+        title="Watch the system flow and inspect each stage"
+        description="This section is the interactive remake of the paper pipeline figure. The board auto-scales to the viewport, the pass animates through the pipeline, and clicking a block explains how deterministic pairing, gating, residual correction, projection, and validation connect."
       >
         <PipelineDiagram />
       </SectionBlock>

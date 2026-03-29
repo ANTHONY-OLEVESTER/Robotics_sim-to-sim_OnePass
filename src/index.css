@@ -53,3 +53,111 @@ h4,
 .prose-block code {
   @apply rounded bg-white/5 px-1.5 py-0.5 text-paper;
 }
+
+.pipeline-node {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.45rem;
+  border-radius: 1.45rem;
+  border: 2px solid rgba(34, 41, 49, 0.9);
+  box-shadow: 0 22px 44px rgba(2, 10, 18, 0.32);
+  color: #15181d;
+  padding: 0.9rem 1rem;
+  text-align: center;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    border-color 180ms ease;
+}
+
+.pipeline-node:hover {
+  transform: translateY(-2px);
+}
+
+.pipeline-node-active {
+  border-color: rgba(12, 15, 18, 0.98);
+  box-shadow:
+    0 0 0 4px rgba(83, 214, 255, 0.18),
+    0 26px 54px rgba(2, 10, 18, 0.38);
+}
+
+.pipeline-node-flow {
+  animation: pipeline-node-pulse 1.7s ease-in-out infinite;
+}
+
+.pipeline-node-badge {
+  border-radius: 999px;
+  border: 1px solid rgba(23, 27, 31, 0.14);
+  background: rgba(255, 255, 255, 0.5);
+  padding: 0.16rem 0.55rem;
+  font-size: 0.54rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.pipeline-node-title {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(0.82rem, 1vw, 1.38rem);
+  font-weight: 700;
+  line-height: 1.05;
+}
+
+.pipeline-node-subtitle {
+  font-size: clamp(0.62rem, 0.82vw, 1rem);
+  line-height: 1.15;
+}
+
+.pipeline-node-plan {
+  background: linear-gradient(180deg, #dfe9fb 0%, #d3def6 100%);
+}
+
+.pipeline-node-sim {
+  background: linear-gradient(180deg, #eadcf0 0%, #dfcfe8 100%);
+}
+
+.pipeline-node-paired {
+  background: linear-gradient(180deg, #e6f1e8 0%, #d9e8dd 100%);
+}
+
+.pipeline-node-gate {
+  background: linear-gradient(180deg, #f8ecd3 0%, #f3e1bb 100%);
+}
+
+.pipeline-node-model {
+  background: linear-gradient(180deg, #f3dde4 0%, #eccfd8 100%);
+}
+
+.pipeline-node-projection {
+  background: linear-gradient(180deg, #e5e0f4 0%, #d8d1eb 100%);
+}
+
+.pipeline-node-validation {
+  background: linear-gradient(180deg, #dff1f4 0%, #d0e7eb 100%);
+}
+
+.pipeline-dash {
+  animation: pipeline-dash-flow 1.8s linear infinite;
+}
+
+@keyframes pipeline-node-pulse {
+  0%,
+  100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-3px) scale(1.015);
+  }
+}
+
+@keyframes pipeline-dash-flow {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: -44;
+  }
+}
