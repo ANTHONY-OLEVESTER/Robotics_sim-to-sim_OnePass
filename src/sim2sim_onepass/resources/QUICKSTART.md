@@ -18,6 +18,13 @@ Package page:
 https://pypi.org/project/sim2sim-onepass/
 ```
 
+Repository and website:
+
+```text
+https://github.com/ANTHONY-OLEVESTER/Robotics_sim-to-sim_OnePass
+https://anthony-olevester.github.io/Robotics_sim-to-sim_OnePass/
+```
+
 Standalone-safe first commands:
 
 ```powershell

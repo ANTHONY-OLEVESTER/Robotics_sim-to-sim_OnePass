@@ -2,6 +2,12 @@
 
 This installed package is a lightweight companion package for the public Sim2Sim-OnePass research release.
 
+Canonical public surfaces:
+
+- repository: `https://github.com/ANTHONY-OLEVESTER/Robotics_sim-to-sim_OnePass`
+- website: `https://anthony-olevester.github.io/Robotics_sim-to-sim_OnePass/`
+- package: `https://pypi.org/project/sim2sim-onepass/`
+
 It provides:
 
 - installable CLI access
@@ -9,7 +15,6 @@ It provides:
 - results navigation
 - environment checks
 - selected lightweight utilities
-- published package access via `https://pypi.org/project/sim2sim-onepass/`
 
 It does not provide by default:
 

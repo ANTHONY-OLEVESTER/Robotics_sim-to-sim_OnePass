@@ -24,6 +24,8 @@ For a full reproducible deposit from the source workspace, include these paths t
 - rerun `scripts/package_release_assets.py` if canonical source files changed
 - confirm videos and preview PNGs open correctly from `outputs/canonical_pass/`
 - attach a zipped curated bundle if repository browsing performance matters
+- confirm repo-facing docs point to the live website and live PyPI package
+- confirm the website branch and package branch describe their own scope honestly
 
 ## Zenodo Checklist
 
@@ -40,3 +42,11 @@ If the canonical PASS source changes, update:
 2. `RESULTS_SUMMARY.md`
 3. `VISUAL_INDEX.md`
 4. run `scripts/package_release_assets.py`
+
+If the public endpoints change, also update:
+
+1. `README.md`
+2. `QUICKSTART.md`
+3. `REPO_MAP.md`
+4. `PYPI_PACKAGE_NOTES.md`
+5. website links on the `gh-pages` branch

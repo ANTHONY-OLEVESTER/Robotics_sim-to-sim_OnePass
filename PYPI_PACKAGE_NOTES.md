@@ -8,6 +8,7 @@ This branch adds a curated Python companion package for the public Sim2Sim-OnePa
 - import: `sim2sim_onepass`
 - CLI: `sim2sim-onepass`
 - package page: `https://pypi.org/project/sim2sim-onepass/`
+- source repository: `https://github.com/ANTHONY-OLEVESTER/Robotics_sim-to-sim_OnePass`
 
 ## Design Decisions
 
@@ -17,6 +18,7 @@ This branch adds a curated Python companion package for the public Sim2Sim-OnePa
 - Simulator-heavy workflows are exposed as guarded wrappers instead of pretending the full simulator workspace ships in PyPI.
 - The public docs and outputs remain repo-first; the package is an adapter layer, not a replacement repo layout.
 - The package is intentionally a lightweight companion package, not a standalone robotics simulator framework.
+- The repository remains the canonical home for media, reports, and public artifact browsing.
 
 ## Command Categories
 

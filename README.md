@@ -2,51 +2,14 @@
 
 This curated layer is the fast path through the repository. It is designed so a new visitor can understand the claim, watch the evidence, inspect the canonical PASS artifacts, and run the shortest validation path without digging through the full development history.
 
-## Companion Package
+## Public Surfaces
 
-This branch adds a PyPI-ready package layer named `sim2sim-onepass`. It is a lightweight companion package for the public research release, not a standalone robotics simulator system. It provides an installable CLI, embedded docs access, results navigation, environment checks, and selected lightweight utilities around the curated repo.
+This repository is the primary public artifact. It is accompanied by:
 
-Local editable install:
+- website: `https://anthony-olevester.github.io/Robotics_sim-to-sim_OnePass/`
+- PyPI companion package: `https://pypi.org/project/sim2sim-onepass/`
 
-```powershell
-python -m pip install -e .
-```
-
-Published PyPI install:
-
-```powershell
-python -m pip install sim2sim-onepass
-```
-
-PyPI package page:
-
-```text
-https://pypi.org/project/sim2sim-onepass/
-```
-
-CLI entrypoint:
-
-```powershell
-sim2sim-onepass --help
-```
-
-What the package does provide:
-
-- repo navigation and public documentation access
-- embedded lightweight markdown docs
-- environment checking
-- quick sanity checks on paired datasets
-- rollout-check wrapper for model + norm + paired data paths
-- guarded simulator workflow commands with clear errors when the full simulator stack is not present
-
-What the package does not provide by default:
-
-- full simulator environments
-- full datasets
-- giant reports dumps
-- replay videos and large binary outputs
-- local environments and machine-specific folders
-- the full simulator env trees and internal training workspace
+Those surfaces help people browse the same public claim in different ways. This root README stays repo-first.
 
 ## Command Capability Levels
 
@@ -73,6 +36,8 @@ What the package does not provide by default:
 | Run the shortest validation path | [QUICKSTART.md](QUICKSTART.md) |
 | Inspect the packaged PASS bundle | [outputs/canonical_pass/](outputs/canonical_pass/) |
 | Understand how the repo is organized | [REPO_MAP.md](REPO_MAP.md) |
+| See the public website | `https://anthony-olevester.github.io/Robotics_sim-to-sim_OnePass/` |
+| Install the companion package | `https://pypi.org/project/sim2sim-onepass/` |
 
 ## See It Before You Read It
 
@@ -113,6 +78,16 @@ After enforcing deterministic cross-simulator alignment between PyBullet and MuJ
 ## Exact Quickstart
 
 This public repo is optimized for inspection first. Open [QUICKSTART.md](QUICKSTART.md) for the shortest path through the packaged evidence and for command references preserved from the source workspace.
+
+## Companion Package
+
+The repository also publishes a lightweight companion package named `sim2sim-onepass`.
+
+- install from PyPI: `python -m pip install sim2sim-onepass`
+- optional rollout extra: `python -m pip install "sim2sim-onepass[rollout]"`
+- package notes: [PYPI_PACKAGE_NOTES.md](PYPI_PACKAGE_NOTES.md)
+
+The package is not the full simulator stack. It provides CLI access to docs, results navigation, environment checks, and selected curated utilities around this repo.
 
 ## What Lives Where
 

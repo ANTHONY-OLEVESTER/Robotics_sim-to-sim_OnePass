@@ -12,6 +12,11 @@ If you only want to inspect the curated release artifacts, open these in order:
 4. [`outputs/canonical_pass/videos/compare_triptych.mp4`](outputs/canonical_pass/videos/compare_triptych.mp4)
 5. [`RESULTS_SUMMARY.md`](RESULTS_SUMMARY.md)
 
+Related public surfaces:
+
+- website: `https://anthony-olevester.github.io/Robotics_sim-to-sim_OnePass/`
+- PyPI package: `https://pypi.org/project/sim2sim-onepass/`
+
 ## Package Install
 
 Editable install from the repo:
@@ -55,6 +60,12 @@ This public repository already includes the selected proof artifacts. You can ve
 2. Open [`outputs/canonical_pass/metrics_summary.json`](outputs/canonical_pass/metrics_summary.json)
 3. Watch [`outputs/canonical_pass/videos/compare_triptych.mp4`](outputs/canonical_pass/videos/compare_triptych.mp4)
 4. Inspect [`outputs/canonical_pass/plots/rollout_phys_p95.png`](outputs/canonical_pass/plots/rollout_phys_p95.png)
+
+If you prefer the website-first path, open:
+
+```text
+https://anthony-olevester.github.io/Robotics_sim-to-sim_OnePass/
+```
 
 ## Environment Setup
 

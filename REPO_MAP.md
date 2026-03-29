@@ -12,6 +12,12 @@ This repository is intentionally small. It is a curated artifact layer, not the 
 - [`PYPI_PACKAGE_NOTES.md`](PYPI_PACKAGE_NOTES.md): package design, exclusions, and local build checklist.
 - [`outputs/canonical_pass/`](outputs/canonical_pass/): copied, reviewer-facing artifacts from selected PASS runs.
 
+## Public Endpoints
+
+- Repository: `https://github.com/ANTHONY-OLEVESTER/Robotics_sim-to-sim_OnePass`
+- Website: `https://anthony-olevester.github.io/Robotics_sim-to-sim_OnePass/`
+- PyPI companion package: `https://pypi.org/project/sim2sim-onepass/`
+
 ## Packaged Evidence
 
 - [`outputs/canonical_pass/source_stress_report.md`](outputs/canonical_pass/source_stress_report.md): copied quantitative PASS report
