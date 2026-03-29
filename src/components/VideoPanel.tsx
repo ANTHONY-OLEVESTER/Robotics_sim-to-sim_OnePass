@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { assetPath, videoItems } from "../data/siteContent";
+import { videoItems } from "../data/siteContent";
 
 export function VideoPanel() {
   const [activeKey, setActiveKey] = useState("triptych");
@@ -27,11 +27,11 @@ export function VideoPanel() {
         <div className="overflow-hidden rounded-[1.5rem] border border-white/10 bg-[#03070d]">
           {active.path ? (
             <video
-              className="aspect-video h-full w-full object-cover"
+              className="aspect-video h-full w-full object-contain bg-black"
               controls
               playsInline
               preload="metadata"
-              poster={assetPath("images/triptych-frame0.png")}
+              poster={active.posterPath}
             >
               <source src={active.path} />
             </video>
@@ -64,7 +64,7 @@ export function VideoPanel() {
               Bullet raw and MuJoCo reference are packaged as standalone videos.
             </div>
             <div className="rounded-2xl border border-white/10 bg-black/20 p-4">
-              The corrected view is currently surfaced through the triptych right panel.
+              The corrected tab uses the triptych video because the public artifact does not include a separate corrected-only MP4.
             </div>
           </div>
         </div>

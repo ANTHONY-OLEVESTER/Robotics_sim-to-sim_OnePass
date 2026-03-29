@@ -2,9 +2,9 @@ export type VideoItem = {
   key: string;
   label: string;
   path?: string;
+  posterPath?: string;
   note: string;
   caption: string;
-  status?: "ready" | "placeholder";
 };
 
 export type MetricCardData = {
@@ -54,6 +54,7 @@ export const videoItems: VideoItem[] = [
     key: "triptych",
     label: "Triptych",
     path: assetPath("videos/triptych-comparison.mp4"),
+    posterPath: assetPath("images/triptych-frame0.png"),
     note: "Best first watch. Raw Bullet, MuJoCo reference, and corrected Bullet are synchronized in one frame.",
     caption: "Triptych comparison from the canonical behavioral PASS run."
   },
@@ -61,6 +62,7 @@ export const videoItems: VideoItem[] = [
     key: "bullet",
     label: "Bullet Raw",
     path: assetPath("videos/bullet-raw.mp4"),
+    posterPath: assetPath("images/bullet-raw-frame0.png"),
     note: "Deterministic raw Bullet replay before correction.",
     caption: "Uncorrected Bullet rollout."
   },
@@ -68,15 +70,17 @@ export const videoItems: VideoItem[] = [
     key: "mujoco",
     label: "MuJoCo Ref",
     path: assetPath("videos/mujoco-reference.mp4"),
+    posterPath: assetPath("images/mujoco-reference-frame0.png"),
     note: "Reference MuJoCo rollout for the same scripted trajectory.",
     caption: "MuJoCo reference rollout."
   },
   {
     key: "corrected",
     label: "Bullet Corrected",
-    note: "The current artifact does not export a standalone corrected-only MP4. The corrected behavior is visible as the right panel in the triptych video. Reserved path: /public/assets/videos/bullet-corrected.mp4",
-    caption: "Placeholder panel for an optional corrected-only render.",
-    status: "placeholder"
+    path: assetPath("videos/triptych-comparison.mp4"),
+    posterPath: assetPath("images/triptych-frame0.png"),
+    note: "The current public artifact does not include a standalone corrected-only MP4. This tab reuses the triptych so you can inspect the corrected rollout in the right panel without hitting a dead placeholder.",
+    caption: "Corrected Bullet behavior is shown in the right panel of the synchronized triptych."
   }
 ];
 
